@@ -44,7 +44,6 @@ normal text
   multiline
 new line
 - list item
-
 new list
 * another list item
 * another list item
@@ -174,6 +173,16 @@ email: MyName@any-provider.country, ssdf My.Name@prov.de
 email: MyName@anyprovider.country, ssdf My.Name@prov-ider.de
 webaddress: www.site.group or http://www.web.de or 123.5.4.111 sdf
 or ftp://?
+
+
+ACHTUNG: Bitte Beachten Sie
+======== diesen Abschnitt, Achtung
+korrekt, aber Achtung: beachten sie jenen Satz. Achtung! ACHTUNG! attention!
+ATTENTION: same Attention: attention: attention!  attention 
+Hinweis: Bemerkung am Rande
+HINWEIS: wer's mag HINWEIS!
+Remark: remark: remark: remarks REMARK REMARKS REMARKS! remark 
+
 
 
 

@@ -7,6 +7,10 @@ syn clear
 "syn match cHexNumber "0x[0-9a-fA-F]\+" 
 "syn match cNumber "[0-9]\+" 
 
+syn keyword cAttention  Achtung: Achtung! ACHTUNG[:] Attention: ATTENTION[:]
+syn keyword cHint       Hinweis: Hinweis! HINWEIS[:] Remark[s]: REMARK[S][:]
+
+
 "syn match	cSpecial	display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
 syn region	cString		start=+L\="+ skip=+\\\\\|\\"+ end=+"+ contains=cSpecial
 " string with german anführungszeichen ascii char 123/148
@@ -87,7 +91,6 @@ syn match cWWW		"[wW][wW][wW]\.\w\+\.\w\+"
 syn match cWWW		"http:\/\/[wW][wW][wW]\.\w\+\.\w\+"
 syn match cWWW		"ftp:\/\/\w\+\.\w\+\.\w\+"
 
-hi  cHeadline_A		gui=bold	guifg=Blue
 hi  cHeadline_B		gui=italic	guifg=Blue
 hi  cHeadline_C		gui=italic	guifg=Blue
 hi  cHeadline_D		gui=italic	guifg=Blue
@@ -99,6 +102,8 @@ hi  cListItem_B1	gui=italic
 hi  cListItem_B2	gui=italic
 hi  cEnum_A 		gui=bold
 hi  cDosPath		gui=bold
+hi  cAttention		            guifg=Red
+hi  cHint   		            guifg=DarkGreen
 
 hi link cNumber			Number
 hi link cOctal			Number
