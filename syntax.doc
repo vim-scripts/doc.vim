@@ -1,0 +1,202 @@
+
+Headline1
+========
+normal text
+
+sub-headline
+------------
+normal text
+
+normal text
+
+noraml text
+Headline
+========
+normal text
+normal
+text
+Headline
+========
+normal text. normal text
+
+1. Headline
+===========
+
+1. Headline
+===========
+normal text
+
+rmal text nomal
+Headline headline
+=================
+Headline headline headlineßöäaÖÄÜü---()[]{} ?!+""''.<>_
+==========================
+normal text
+Sub-headline
+------------
+für headline2 müsste ein anderes "startpattern" angegeben werden ?
+wir können „vielleicht auch „deutsche” Anführungszeichen” (unten-oben).
+wir können „vielleicht auch „deutsche” Anführungszeichen\” (unten-oben)”.
+wir können „vielleicht” auch \„deutsche” Anführungszeichen” (unten-oben).
+normal text
+- list item
+- list item
+  multiline
+new line
+- list item
+
+new list
+* another list item
+* another list item
+  multiline
+new line
+* another list item
+
+indented list
+	- list item
+	- list item
+	  multiline
+	new line
+	- list item
+
+- list item
+
+normal text
+sub headline öäü ß "sonderz" 'sonderz' (klammern) / ! ? ´` + ende
+-----------------------------------------------------------------
+	1. first enumeration
+sub headline öäü ß "sonderz" 'sonderz' <text> (klammern) / ! ? ´` + ende
+-----------------------------------------------------------------
+normal text <tex-t>
+
+normal text
+1) numbered headline
+====================
+1.1 numbered sub headline
+-------------------------
+normal text
+
+1.2) numbered sub headline
+-------------------------
+normal text
+1.2 numbered sub headline
+-------------------------
+enumeration:
+1. first thing
+2. second stuff
+3. third weird
+normal text
+
+headline underlined with an inverse '_'
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+and
+now
+_______________________________________
+surrounded by underscore and abovescore
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+geill, gell ?
+
+and
+now
+…………………………………………………………………
+surrounded by perforation
+…………………………………………………………………
+and
+now
+••••••••••••••••••••••
+surrounded by fat dots
+••••••••••••••••••••••
+geill, gell ?
+
+_______________________________________
+surrounded by underscore and abovescore
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+geill, gell ?
+
+
+1. first paragraph
+with multi
+lines
+
+2. paragraph
+with 
+multi
+	lines
+
+3. 
+
+A) another enum
+normal text
+
+B) second thing
+
+A) another enum
+B) second thing
+3) third one
+
+normal text with "strings"  single 'strings' , my be URLs http://etc
+lines 123 with 0 some 1000020304 numbers o12 12. sdf 123b
+lines 0xf123 with 0x0fb some 0x10000abcdef20304 numbers 0xo12 0x12. sdf 0x123b
+floats 123,000 sdf 123.000 ?
+
+number 0123 with leading 000418004 zeros 00011123456 .Registration: 000418004
+<Del>
+
+dos path:
+	viewfile=P:\CRSystem\PR-Tracker Database\<projekt>\Views\<view>.prv
+	viewfile=P:\CRSystem\PR-TrackerDatabase\<projekt>\Views\<view>.prv
+	viewfile="P:\CRSystem\PR-Tracker Database\<projekt>\Views\<view>.prv"
+	unixfile=P:/CRSystem/PR-Tracker Database/<projekt>/Views/<view>.prv
+	unixfile=P:/CRSystem/PR-TrackerDatabase/<projekt>/Views/<view>.prv
+	unixfile="P:/CRSystem/PR-Tracker Database/<projekt>/Views/<view>.prv"
+
+
+Time and Date
+=============
+
+Uhr 12:54:59 sdf 01:01:01 sef 00:00:00 dsfv 00:00 12:59 asdf 59:59 sg
+9:58
+12:12:12
+Datum 01.01.2001 sdf 01.01.01 sdf 1.1.2002 sdf 99.99.9999 sdf 100.12.2001
+sdf 01/01/01 sdf 01. Januar 2002, 3. März 2002 sdf 1. Feb. 2003 sdf
+sdfsdf (01.01.2000)asd as (1. Jan. 2001)sd 
+df Fr, 1.1.2001,  Sa, 1. Jan. 2001 
+Mo, 10.1.01
+3.4.04 sdf
+let's say 2 or 30 for 4, but 2 or 3 for 4.
+
+______________
+
+Internet stuff
+______________
+
+email: MyName@any-provider.country, ssdf My.Name@prov.de
+email: MyName@anyprovider.country, ssdf My.Name@prov-ider.de
+webaddress: www.site.group or http://www.web.de or 123.5.4.111 sdf
+or ftp://?
+
+
+
+
+
+syn clear
+"syn match cHeadline_A "^[0-9a-zA-Z\.,:;öäüÖÄÜß_\-\\\/\"\!?'´`+()]\+[ ^I0-9a-zA-Z\.,:;_\-öäüÖÄÜß\\\/\"\!?'´`+()]*\n===*$"
+"syn match cHeadline_B "^[0-9a-zA-Z\.,:;öäüÖÄÜß_\-\\\/\"\!?'´`+()]\+[ ^I0-9a-zA-Z\.,:;_\-öäüÖÄÜß\\\/\"\!?'´`+()]*\n---*$"
+syn match cHeadline_A "^.*\n===*$"
+syn match cHeadline_B "^.*\n---*$"
+syn match cUnderlined "^.*\n__*$"
+" single line list item starting with '-'
+syn match cListItem_A "^[ ^I]*-[ ^I].*\n\s\+\S\+$"
+" multi line list item starting with '-'
+syn match cListItem_A "^[ ^I]*-[ ^I].*\n\s\+\S\+$"
+" single line list item starting with '*'
+syn match cListItem_B "^[ ^I]*\*[ ^I].*\n\s\+\S\+$"
+" multi line list item starting with '*'
+syn match cListItem_B "^[ ^I]*\*[ ^I].*\n\s\+\S\+$"
+
+hi  cHeadline_A gui=bold guifg=Blue
+hi  cHeadline_B gui=italic guifg=DarkBlue
+hi  cUnderlined gui=italic guifg=Darkgreen
+hi  cListItem_A gui=bold
+hi  cListItem_B gui=italic
+

@@ -9,6 +9,8 @@ syn clear
 
 "syn match	cSpecial	display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
 syn region	cString		start=+L\="+ skip=+\\\\\|\\"+ end=+"+ contains=cSpecial
+" string with german anführungszeichen ascii char 123/148
+syn region	cString		start=+L\=„+ skip=+\\\\\|\\”\|\\„+ end=+”+ contains=cSpecial,cString
 " don't match the apastrophe "'" in "don't" !
 syn region	cSString	start=+\W'+ skip=+\\\\\|\\'+ end=+'+ contains=cSpecial
 
@@ -56,11 +58,17 @@ syn region cExText		start="<" end=">" contains=cSpecial
 syn match cEnum_A 	"^\s*[a-zA-Z0-9]\+[\.)]\s\+.*$"  
 
 " match headlines: any text folleowed by line with '=' or '-'
-syn match cHeadline_A "^.*\n===*$"
-syn match cHeadline_B "^.*\n---*$" 
+syn match cHeadline_A "^.\+\n===*$"
+syn match cHeadline_B "^.\+\n---*$" 
+" or '¯' (ascii char 175)
+syn match cHeadline_C "^.\+\n¯¯¯*$" 
+" or '…' (ascii char 133)
+syn match cHeadline_D "^.\+\n………*$" 
 
 " underlined headline, might be used for header/footer separation ?
-syn match cUnderlined "^.*\n__*$"
+syn match cUnderlined "^.\+\n__*\n\s*$"
+
+syn match cBlock	 "^_\+\n.*\n¯¯¯*$" 
 
 " single line list item starting with '-'
 syn match cListItem_A1 "^\s*-\s\+.*$"
@@ -81,7 +89,10 @@ syn match cWWW		"ftp:\/\/\w\+\.\w\+\.\w\+"
 
 hi  cHeadline_A		gui=bold	guifg=Blue
 hi  cHeadline_B		gui=italic	guifg=Blue
-hi  cUnderlined		gui=bold 	guifg=DarkBlue
+hi  cHeadline_C		gui=italic	guifg=Blue
+hi  cHeadline_D		gui=italic	guifg=Blue
+hi  cUnderlined		gui=italic 	guifg=Blue
+hi  cBlock			gui=bold 	guifg=Blue
 hi  cListItem_A1	gui=bold
 hi  cListItem_A2	gui=bold
 hi  cListItem_B1	gui=italic
