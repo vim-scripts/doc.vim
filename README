@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=262
+
+Gives you syntax coloring for ASCII-documentation files.
+Not perfect, but may be a base for your own.
+
+Detects headlines (underlined with '-' or '='),
+enumerations, lists (starting with '-' or '*')
+some simple time, date formats 
+some simple email addresses, web addresses.
